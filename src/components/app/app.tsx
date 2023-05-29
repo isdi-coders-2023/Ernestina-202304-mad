@@ -1,3 +1,9 @@
+import { Home } from "../home/home";
+
 export default function App() {
-  return <></>;
+  return (
+    <>
+      <Home></Home>
+    </>
+  );
 }
