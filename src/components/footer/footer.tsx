@@ -1,5 +1,4 @@
 export function Footer() {
-
   return (
     <footer>
       <p>DIGI-API © Ernestina's Team</p>
@@ -7,18 +6,3 @@ export function Footer() {
     </footer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
