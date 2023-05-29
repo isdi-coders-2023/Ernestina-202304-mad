@@ -2,23 +2,10 @@ export function Footer() {
 
   return (
     <footer>
-      <p>DIGI-API © Ernestina's Team</p>
-      <span>ISDI Coders</span>
+      <div>
+        <span>DIGI-API © Ernestina's Team</span>
+        <span>ISDI Coders</span>
+      </div>
     </footer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
