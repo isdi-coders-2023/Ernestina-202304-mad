@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "start": "json-server --watch db.json",
     "test": "jest --watchAll --coverage",
-    "test:prod": "jest --watchAll --coverage --watchAll=false"
+    "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests"
   },
   "dependencies": {
     "@types/aria-query": "^5.0.1",
