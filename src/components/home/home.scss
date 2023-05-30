@@ -1,11 +1,18 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+$home-primary-color: #8b9aef;
+$home-secondary-color: #eead1b;
+
+.home--desktop-bg {
+  width: 100vw;
+  display: none;
+  @media only screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
-img {
-  width: 100vw;
+.home--mobile-bg {
   height: 100vh;
+  width: auto;
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
 }

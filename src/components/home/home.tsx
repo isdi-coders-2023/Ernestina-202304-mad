@@ -8,8 +8,14 @@ export function Home() {
   return (
     <>
       <img
-        src="/public/backgrounds/desktop/HOME.png"
+        className="home--desktop-bg"
+        src="/backgrounds/desktop/HOME.png"
         alt="Digimon desktop background"
+      />
+      <img
+        className="home--mobile-bg"
+        src="/backgrounds/mobile/MOBILE.png"
+        alt="Digimon mobile background"
       />
       <Header
         title={title.toUpperCase()}

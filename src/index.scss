@@ -1,0 +1,64 @@
+$breakpoint_mobile: 320px;
+$breakpoint_desktop: 1200px;
+
+$create-primary-color: #9ecc96;
+$create-secondary-color: #028154;
+$library-primary-color: #ffbdab;
+$library-secondary-color: #754214;
+$detail-primary-color: #7c5da0;
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Digimon";
+  src: url("/public/fonts/Pixel\ Digivolve.otf");
+}
+
+html,
+body {
+  font-family: "Digimon", serif;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+footer,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
