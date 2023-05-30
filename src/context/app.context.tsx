@@ -1,11 +1,8 @@
 import { createContext } from "react";
-import { useNotes } from "../hooks/use.notes";
-import { useBooks } from "../hooks/use.books";
+import { useDigimon } from "../hooks/use.digimon";
 
 export type ContextStructure = {
-  sample: string;
-  notesContext: ReturnType<typeof useNotes>;
-  booksContext: ReturnType<typeof useBooks>;
+  digimonContext: ReturnType<typeof useDigimon>;
 };
 
 export const AppContext = createContext<ContextStructure>(
