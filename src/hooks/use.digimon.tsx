@@ -3,7 +3,7 @@ import { Digimon } from "../models/digimon";
 import { ApiRepository } from "../services/api.repository";
 
 export function useDigimon() {
-  const query = "";
+  const querySize = "?pageSize=20";
   const [digimon, setDigimon] = useState<Digimon[]>([]);
 
   const repo: ApiRepository<Digimon> = useMemo(
@@ -12,15 +12,13 @@ export function useDigimon() {
   );
 
   const handleLoad = useCallback(async () => {
-    const loadedDigimon = await repo.getAll(query);
+    const loadedDigimon = await repo.getAll(querySize);
     setDigimon(loadedDigimon);
   }, [repo]);
 
   useEffect(() => {
     handleLoad();
   }, [handleLoad]);
-
-  console.log(repo.getAll(query));
 
   return {
     digimon,
