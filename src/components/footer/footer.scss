@@ -1,0 +1,22 @@
+footer {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  z-index: 1;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-signature {
+  color: lightgray;
+  font-size: 0.5rem;
+}
