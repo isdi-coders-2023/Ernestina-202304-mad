@@ -1,7 +1,21 @@
 h1 {
   color: white;
+  font-size: 4.2rem;
 }
 
 h2 {
   color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  width: 65%;
+}
+
+header {
+  font-style: italic;
+  width: 90vw;
+  z-index: 1;
+  position: absolute;
+  margin: 0.5em 1.4rem;
+  @media only screen and (min-width: 376px) {
+    display: none;
+  }
 }
