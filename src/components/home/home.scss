@@ -4,7 +4,8 @@ $home-secondary-color: #eead1b;
 .home--desktop-bg {
   width: 100vw;
   display: none;
-  @media only screen and (min-width: 1200px) {
+  position: relative;
+  @media only screen and (min-width: 376px) {
     display: block;
   }
 }
@@ -12,7 +13,8 @@ $home-secondary-color: #eead1b;
 .home--mobile-bg {
   height: 100vh;
   width: auto;
-  @media only screen and (min-width: 1200px) {
+  position: relative;
+  @media only screen and (min-width: 376px) {
     display: none;
   }
 }
@@ -21,7 +23,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
-  margin: 0 2rem 6rem 2rem;
+  margin: 2rem 2rem 6rem 2rem;
 }
 
 li {
@@ -30,23 +32,71 @@ li {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  box-shadow: 0 0 20px #8b9aef35;
-  color: $home-primary-color;
+  // color: $home-primary-color;
   font-size: 1.5rem;
   text-align: center;
   min-height: 20em;
 }
 
 li:hover {
-  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 20px #8b9aef35;
+}
+
+li:hover img {
+  transform: scale(1) rotate(2deg);
   transition: 0.5s ease-in-out;
 }
 
 li img {
-  min-height: 10em;
+  transform: scale(0.9);
+  height: 80%;
   margin: 1em;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20%;
 }
 
 .card-id {
   color: $home-secondary-color;
+}
+
+li {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    background: linear-gradient(
+      to right,
+      fade_out(#fff, 1) 0%,
+      fade_out(#fff, 0.7) 100%
+    );
+    content: "";
+    display: block;
+    height: 100%;
+    left: -75%;
+    position: absolute;
+    top: 0;
+    transform: skewX(-25deg);
+    width: 50%;
+    z-index: 2;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      animation: shine 0.85s;
+    }
+  }
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
 }

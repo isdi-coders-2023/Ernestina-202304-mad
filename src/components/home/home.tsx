@@ -8,9 +8,13 @@ export function Home() {
   useDigimon();
 
   const title = "Digimon";
-  const subtitle = "♥ Caringly crafted API";
+  const subtitle = `♥ Caringly crafted API`;
   return (
     <>
+      <Header
+        title={title.toUpperCase()}
+        subtitle={subtitle.toUpperCase()}
+      ></Header>
       <img
         className="home--desktop-bg"
         src="/backgrounds/desktop/HOME.png"
@@ -21,10 +25,6 @@ export function Home() {
         src="/backgrounds/mobile/MOBILE.png"
         alt="Digimon mobile background"
       />
-      <Header
-        title={title.toUpperCase()}
-        subtitle={subtitle.toUpperCase()}
-      ></Header>
       <List></List>
       <Footer></Footer>
     </>
