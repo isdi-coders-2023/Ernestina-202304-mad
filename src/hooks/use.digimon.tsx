@@ -13,7 +13,8 @@ export function useDigimon() {
 
   const handleLoad = useCallback(async () => {
     const loadedDigimon = await repo.getAll(querySize);
-    setDigimon(loadedDigimon);
+    const content = loadedDigimon.content;
+    setDigimon(content);
   }, [repo]);
 
   useEffect(() => {

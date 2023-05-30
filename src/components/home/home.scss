@@ -16,3 +16,37 @@ $home-secondary-color: #eead1b;
     display: none;
   }
 }
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  margin: 0 2rem 6rem 2rem;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 0 0 20px #8b9aef35;
+  color: $home-primary-color;
+  font-size: 1.5rem;
+  text-align: center;
+  min-height: 20em;
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+li img {
+  min-height: 10em;
+  margin: 1em;
+}
+
+.card-id {
+  color: $home-secondary-color;
+}

@@ -1,6 +1,7 @@
 import { useDigimon } from "../../hooks/use.digimon";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
+import { List } from "../list/list";
 import "./home.scss";
 
 export function Home() {
@@ -24,7 +25,7 @@ export function Home() {
         title={title.toUpperCase()}
         subtitle={subtitle.toUpperCase()}
       ></Header>
-
+      <List></List>
       <Footer></Footer>
     </>
   );
