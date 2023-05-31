@@ -11,16 +11,22 @@ export function Controls() {
     <>
       <div className="controls">
         <button
+          className={currentPage === 0 ? "disabled" : "active"}
           onClick={() => {
-            currentPage > 0 && currentPage < 70
-              ? setCurrentPage(currentPage - 1)
-              : 0;
+            currentPage > 0 ? setCurrentPage(currentPage - 1) : 0;
           }}
         >
           ⬅
         </button>
         <a href="#header">GO BACK UP</a>
-        <button onClick={() => setCurrentPage(currentPage + 1)}>➡</button>
+        <button
+          className={currentPage === 70 ? "disabled" : "active"}
+          onClick={() => {
+            currentPage < 70 ? setCurrentPage(currentPage + 1) : 70;
+          }}
+        >
+          ➡
+        </button>
       </div>
     </>
   );
