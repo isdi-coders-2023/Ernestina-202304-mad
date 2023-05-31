@@ -4,9 +4,9 @@ type PropsType = {
   item: Digimon;
 };
 
-export function PublicCard({ item }: PropsType) {
+export function Card({ item }: PropsType) {
   return (
-    <li className="public-card">
+    <li className="card">
       <img src={item.image} alt={`Respresentación de ${item.name}`} />
       <div className="card-data">
         <span>{item.name}</span>

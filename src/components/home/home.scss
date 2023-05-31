@@ -32,7 +32,6 @@ li {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  // color: $home-primary-color;
   font-size: 1.5rem;
   text-align: center;
   min-height: 20em;
@@ -44,12 +43,12 @@ li:hover {
 }
 
 li:hover img {
-  transform: scale(1) rotate(2deg);
+  transform: scale(0.8) rotate(2deg);
   transition: 0.5s ease-in-out;
 }
 
 li img {
-  transform: scale(0.9);
+  transform: scale(0.7);
   height: 80%;
   margin: 1em;
 }

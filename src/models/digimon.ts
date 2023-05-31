@@ -8,3 +8,7 @@ export type Digimon = {
   url: string;
   image: string;
 };
+
+export interface DigimonRepo {
+  getAll(query: string, currentPage: number): Promise<ApiResponse>;
+}
