@@ -16,6 +16,6 @@ header {
   position: absolute;
   margin: 0.5em 1.4rem;
   @media only screen and (min-width: 376px) {
-    display: none;
+    opacity: 0;
   }
 }
