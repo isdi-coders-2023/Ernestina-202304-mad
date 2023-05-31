@@ -17,13 +17,11 @@ describe("Given List component", () => {
       },
     } as unknown as ContextStructure;
 
-    beforeEach(() => {
-      render(
-        <AppContext.Provider value={value}>
-          <List></List>
-        </AppContext.Provider>
-      );
-    });
+    render(
+      <AppContext.Provider value={value}>
+        <List></List>
+      </AppContext.Provider>
+    );
 
     test("Then it should contain an <li> element", () => {
       const element = screen.getByRole("list");

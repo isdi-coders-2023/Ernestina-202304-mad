@@ -1,4 +1,5 @@
 import { useDigimon } from "../../hooks/use.digimon";
+import { Controls } from "../controls/controls";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { List } from "../list/list";
@@ -26,6 +27,7 @@ export function Home() {
         alt="Digimon mobile background"
       />
       <List></List>
+      <Controls></Controls>
       <Footer></Footer>
     </>
   );

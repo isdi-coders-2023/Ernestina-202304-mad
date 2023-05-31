@@ -4,16 +4,18 @@ import { ApiRepository } from "../services/api.repository";
 
 export function useDigimon() {
   const query = "?pageSize=20&page=";
-  const currentPage = 3;
   const [digimon, setDigimon] = useState<Digimon[]>([]);
+
+  const [currentPage, setCurrentPage] = useState(0);
 
   const repo: ApiRepository = useMemo(() => new ApiRepository(), []);
 
   const handleLoad = useCallback(async () => {
     const loadedDigimon = await repo.getAll(query, currentPage);
-    const pero = loadedDigimon.content;
-    setDigimon(pero);
-  }, [repo]);
+    const content = loadedDigimon.content;
+    setDigimon(content);
+    setCurrentPage;
+  }, [currentPage, repo]);
 
   useEffect(() => {
     handleLoad();
@@ -21,6 +23,8 @@ export function useDigimon() {
 
   return {
     digimon,
+    currentPage,
+    setCurrentPage,
     handleLoad,
   };
 }
