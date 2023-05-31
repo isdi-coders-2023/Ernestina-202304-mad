@@ -1,17 +1,10 @@
-import { useCallback, useEffect, useMemo, useReducer } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Digimon } from "../models/digimon";
 import { ApiRepository } from "../services/api.repository";
-import { DigimonState, digimonReducer } from "../reducers/reducer";
-import * as ac from "../reducers/actions.creator";
 
 export function useDigimon() {
-
   const query = "?pageSize=20&page=";
   const [digimon, setDigimon] = useState<Digimon[]>([]);
-
-
-  const querySize = "?pageSize=20&page=";
-  const currentPage = 3;
-
 
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -24,14 +17,11 @@ export function useDigimon() {
     setCurrentPage;
   }, [currentPage, repo]);
 
-  }, [repo]);
-
   useEffect(() => {
     handleLoad();
   }, [handleLoad]);
 
   return {
-
     digimon,
     currentPage,
     setCurrentPage,
