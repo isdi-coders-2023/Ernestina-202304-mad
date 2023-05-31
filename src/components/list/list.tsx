@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/app.context";
-import { PublicCard } from "../public.card/public.card";
+import { Card } from "../card/card";
 
 export function List() {
   const {
@@ -10,7 +10,7 @@ export function List() {
   return (
     <ul className="digimons" role="list">
       {digimon.map((item) => (
-        <PublicCard key={item.name} item={item}></PublicCard>
+        <Card key={item.name} item={item}></Card>
       ))}
     </ul>
   );
