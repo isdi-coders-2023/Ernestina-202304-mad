@@ -17,7 +17,6 @@ export function useDigimon() {
 
   const handleLoad = useCallback(async () => {
     const loadedDigimon = await repo.getAll(querySize, currentPage);
-
     dispatch(ac.loadDigimonAction(loadedDigimon.content));
   }, [repo]);
 
