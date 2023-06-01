@@ -13,8 +13,8 @@ export function Header({ title, subtitle }: Propstype) {
   };
   return (
     <>
-      <header className="header" id="header">
-        <h1 onClick={handleReturnHome}>{title}</h1>
+      <header onClick={handleReturnHome} className="header" id="header">
+        <h1>{title}</h1>
         <h2>{subtitle}</h2>
       </header>
     </>
