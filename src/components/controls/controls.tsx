@@ -7,10 +7,10 @@ export function Controls() {
     digimonContext: { setCurrentPage, currentPage },
   } = useContext(AppContext);
 
-  const handleNextPage = () =>
+  const handleIncreasePageNumber = () =>
     currentPage < 70 ? setCurrentPage(currentPage + 1) : 70;
 
-  const handlePreviousPage = () =>
+  const handleDecreasePageNumber = () =>
     currentPage > 0 ? setCurrentPage(currentPage - 1) : 0;
 
   return (
@@ -18,14 +18,14 @@ export function Controls() {
       <section className={style.controls}>
         <button
           className={currentPage === 0 ? style.disabled : style.active}
-          onClick={handlePreviousPage}
+          onClick={handleDecreasePageNumber}
         >
           ⬅
         </button>
         <a href="#header">GO BACK UP</a>
         <button
           className={currentPage === 70 ? style.disabled : style.active}
-          onClick={handleNextPage}
+          onClick={handleIncreasePageNumber}
         >
           ➡
         </button>
