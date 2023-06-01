@@ -1,13 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Header } from "./header";
+import { BrowserRouter, Link } from "react-router-dom";
 
 describe("Given a Header component", () => {
   describe("When it is intantiated", () => {
     const title = "TEST TITLE";
     const subtitle = "TEST SUBTITLE";
     beforeEach(() => {
-      render(<Header title={title} subtitle={subtitle}></Header>);
+      render(
+        <BrowserRouter>
+          <Link to="/">
+            <Header title={title} subtitle={subtitle}></Header>
+          </Link>
+        </BrowserRouter>
+      );
     });
 
     test("Then it should be in the document", () => {
@@ -23,4 +30,7 @@ describe("Given a Header component", () => {
       expect(elementH2).toBeInTheDocument;
     });
   });
+  // test("Then it should display props values", () => {
+
+  // });
 });
