@@ -1,9 +1,9 @@
-import { Home } from "../home/home";
+import { AppRoutes } from "../app.routes/app.routes";
 
 export default function App() {
   return (
     <>
-      <Home></Home>
+      <AppRoutes></AppRoutes>
     </>
   );
 }

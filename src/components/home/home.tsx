@@ -5,9 +5,8 @@ import { Header } from "../header/header";
 import { List } from "../list/list";
 import "./home.scss";
 
-export function Home() {
+export default function Home() {
   useDigimon();
-
   const title = "Digimon";
   const subtitle = `♥ Caringly crafted API`;
   return (
