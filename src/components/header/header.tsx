@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./header.scss";
 
 type Propstype = {
@@ -6,9 +7,13 @@ type Propstype = {
 };
 
 export function Header({ title, subtitle }: Propstype) {
+  const navigate = useNavigate();
+  const handleReturnHome = () => {
+    navigate("/");
+  };
   return (
     <>
-      <header className="header" id="header">
+      <header onClick={handleReturnHome} className="header" id="header">
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
       </header>
