@@ -1,5 +1,5 @@
 import { AppContext } from "../../context/app.context";
-import "./controls.scss";
+import style from "./controls.module.scss";
 import { useContext } from "react";
 
 export function Controls() {
@@ -7,27 +7,29 @@ export function Controls() {
     digimonContext: { setCurrentPage, currentPage },
   } = useContext(AppContext);
 
+  const handleNextPage = () =>
+    currentPage < 70 ? setCurrentPage(currentPage + 1) : 70;
+
+  const handlePreviousPage = () =>
+    currentPage > 0 ? setCurrentPage(currentPage - 1) : 0;
+
   return (
     <>
-      <div className="controls">
+      <section className={style.controls}>
         <button
-          className={currentPage === 0 ? "disabled" : "active"}
-          onClick={() => {
-            currentPage > 0 ? setCurrentPage(currentPage - 1) : 0;
-          }}
+          className={currentPage === 0 ? style.disabled : style.active}
+          onClick={handlePreviousPage}
         >
           ⬅
         </button>
         <a href="#header">GO BACK UP</a>
         <button
-          className={currentPage === 70 ? "disabled" : "active"}
-          onClick={() => {
-            currentPage < 70 ? setCurrentPage(currentPage + 1) : 70;
-          }}
+          className={currentPage === 70 ? style.disabled : style.active}
+          onClick={handleNextPage}
         >
           ➡
         </button>
-      </div>
+      </section>
     </>
   );
 }

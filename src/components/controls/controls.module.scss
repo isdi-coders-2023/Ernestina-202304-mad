@@ -7,23 +7,23 @@ $home-secondary-color: #eead1b;
   align-items: center;
   margin: 8em;
   height: 10vh;
-}
 
-.controls a {
-  margin: 0 1.5em;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-}
+  a {
+    margin: 0 1.5em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+  }
 
-a:visited {
-  color: inherit;
-}
+  a:visited {
+    color: inherit;
+  }
 
-a:hover {
-  transform: scale(1.04);
-  transition: 0.2s ease-in-out;
+  a:hover {
+    transform: scale(1.04);
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .active,

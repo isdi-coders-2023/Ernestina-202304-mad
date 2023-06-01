@@ -35,37 +35,6 @@ li {
   font-size: 1.5rem;
   text-align: center;
   min-height: 20em;
-}
-
-li:hover {
-  transition: 0.5s ease-in-out;
-  box-shadow: 0 0 20px #8b9aef35;
-}
-
-li:hover img {
-  transform: scale(0.8) rotate(2deg);
-  transition: 0.5s ease-in-out;
-}
-
-li img {
-  transform: scale(0.7);
-  height: 80%;
-  margin: 1em;
-}
-
-.card-data {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 20%;
-}
-
-.card-id {
-  color: $home-secondary-color;
-}
-
-li {
   position: relative;
   overflow: hidden;
 
@@ -98,4 +67,32 @@ li {
       left: 125%;
     }
   }
+}
+
+li:hover {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 20px #8b9aef35;
+}
+
+li img {
+  transform: scale(0.7);
+  height: 80%;
+  margin: 1em;
+}
+
+li:hover img {
+  transform: scale(0.8) rotate(2deg);
+  transition: 0.5s ease-in-out;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 20%;
+}
+
+.card-id {
+  color: $home-secondary-color;
 }
