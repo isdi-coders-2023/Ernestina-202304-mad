@@ -7,21 +7,9 @@ export type DigimonState = {
 };
 
 export const digimonReducer = (state: DigimonState, action: DigimonAction) => {
-  let payload: Digimon[];
+  let payload: Digimon[] | Digimon | number;
   switch (action.type) {
     case actionTypes.load:
-      payload = action.payload as Digimon[];
-      return { ...state, digimons: payload };
-
-    case actionTypes.delete:
-      payload = action.payload as Digimon[];
-      return { ...state, digimons: payload };
-
-    case actionTypes.create:
-      payload = action.payload as Digimon[];
-      return { ...state, digimons: payload };
-
-    case actionTypes.update:
       payload = action.payload as Digimon[];
       return { ...state, digimons: payload };
 
