@@ -1,0 +1,31 @@
+.filter {
+  display: flex;
+  width: 50vw;
+  height: 5em;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 0;
+
+  select {
+    appearance: none;
+    background-color: #8b9aef;
+    color: white;
+    text-align: center;
+    margin: 2em;
+    width: 30em;
+    height: 3em;
+    font-size: 1.5em;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem;
+    font-family: "Digimon", serif;
+    cursor: pointer;
+  }
+
+  img {
+    width: 1em;
+    position: absolute;
+    left: 38%;
+    z-index: inherit;
+  }
+}
