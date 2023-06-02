@@ -2,34 +2,34 @@ import { Digimon } from "../models/digimon";
 import { actionTypes } from "./actions.types";
 
 export type DigimonAction = {
-  type: keyof typeof actionTypes;
+  type: string,
   payload: Digimon[];
 };
 
 export function loadDigimonAction(payload: Digimon[]): DigimonAction {
   return {
-    type: actionTypes.load as keyof typeof actionTypes,
+    type: actionTypes.load,
     payload,
   };
 }
 
 export function deleteDigimonAction(payload: Digimon[]): DigimonAction {
   return {
-    type: actionTypes.delete as keyof typeof actionTypes,
+    type: actionTypes.delete,
     payload,
   };
 }
 
 export function createDigimonAction(payload: Digimon[]): DigimonAction {
   return {
-    type: actionTypes.create as keyof typeof actionTypes,
+    type: actionTypes.create,
     payload,
   };
 }
 
 export function updateDigimonAction(payload: Digimon[]): DigimonAction {
   return {
-    type: actionTypes.update as keyof typeof actionTypes,
+    type: actionTypes.update,
     payload,
   };
 }
