@@ -9,7 +9,9 @@ export function Card({ item }: PropsType) {
   return (
     <Link to="details">
       <li className="card">
-        <img src={item.image} alt={`Representación de ${item.name}`} />
+        <div className="card-image">
+          <img src={item.image} alt={`Representación de ${item.name}`} />
+        </div>
         <div className="card-data">
           <span>{item.name}</span>
           <span className="card-id">#{item.id}</span>

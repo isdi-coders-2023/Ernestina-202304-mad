@@ -1,12 +1,6 @@
 $home-primary-color: #8b9aef;
 $home-secondary-color: #eead1b;
 
-header {
-  @media only screen and (min-width: 376px) {
-    opacity: 0;
-  }
-}
-
 .home--desktop-bg {
   width: 100vw;
   display: none;
@@ -23,6 +17,14 @@ header {
   @media only screen and (min-width: 376px) {
     display: none;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 ul {
@@ -73,6 +75,20 @@ li {
       left: 125%;
     }
   }
+  .card-image {
+    display: flex;
+    align-items: center;
+    min-height: 16em;
+  }
+
+  .card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+    text-decoration: none;
+  }
 }
 
 li:hover {
@@ -91,15 +107,12 @@ li:hover img {
   transition: 0.5s ease-in-out;
 }
 
-.card-data {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 20%;
-  text-decoration: none;
-}
-
 .card-id {
   color: $home-secondary-color;
+}
+
+header {
+  @media only screen and (min-width: 376px) {
+    opacity: 0;
+  }
 }
