@@ -14,6 +14,10 @@ export default function Details() {
           title={title.toUpperCase()}
           subtitle={subtitle.toUpperCase()}
         ></Header>
+        <img
+          src="../../../public/backgrounds/desktop/DETAILS.jpg"
+          alt="Details desktop background"
+        />
         <Footer></Footer>
       </div>
     </>

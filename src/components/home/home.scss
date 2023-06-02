@@ -1,12 +1,18 @@
 $home-primary-color: #8b9aef;
 $home-secondary-color: #eead1b;
 
+header {
+  @media only screen and (min-width: 376px) {
+    opacity: 0;
+  }
+}
+
 .home--desktop-bg {
   width: 100vw;
   display: none;
   position: relative;
   @media only screen and (min-width: 376px) {
-    display: block;
+    display: initial;
   }
 }
 
@@ -35,7 +41,6 @@ li {
   font-size: 1.5rem;
   text-align: center;
   min-height: 20em;
-
   position: relative;
   overflow: hidden;
 
@@ -92,6 +97,7 @@ li:hover img {
   justify-content: flex-start;
   align-items: center;
   height: 20%;
+  text-decoration: none;
 }
 
 .card-id {

@@ -4,7 +4,7 @@ import Filter from "../filter/filter";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { List } from "../list/list";
-import "./home.scss";
+import style from "./home.module.scss";
 
 export default function Home() {
   useDigimon();
@@ -12,24 +12,26 @@ export default function Home() {
   const subtitle = `♥ Caringly crafted API`;
   return (
     <>
-      <Header
-        title={title.toUpperCase()}
-        subtitle={subtitle.toUpperCase()}
-      ></Header>
-      <img
-        className="home--desktop-bg"
-        src="/backgrounds/desktop/HOME.png"
-        alt="Digimon desktop background"
-      />
-      <img
-        className="home--mobile-bg"
-        src="/backgrounds/mobile/MOBILE.png"
-        alt="Digimon mobile background"
-      />
-      <Filter></Filter>
-      <List></List>
-      <Controls></Controls>
-      <Footer></Footer>
+      <div className={style.container}>
+        <Header
+          title={title.toUpperCase()}
+          subtitle={subtitle.toUpperCase()}
+        ></Header>
+        <img
+          className="home--desktop-bg"
+          src="/backgrounds/desktop/HOME.png"
+          alt="Digimon desktop background"
+        />
+        <img
+          className="home--mobile-bg"
+          src="/backgrounds/mobile/MOBILE.png"
+          alt="Digimon mobile background"
+        />
+        <Filter></Filter>
+        <List></List>
+        <Controls></Controls>
+        <Footer></Footer>
+      </div>
     </>
   );
 }

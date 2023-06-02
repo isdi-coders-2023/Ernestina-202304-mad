@@ -1,2 +1,21 @@
 .detailsContainer {
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  img {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  header {
+    z-index: 1;
+  }
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: rgba(0, 0, 0, 0.5);
+  }
 }
