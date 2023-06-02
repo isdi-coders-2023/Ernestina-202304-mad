@@ -1,4 +1,4 @@
-export type navOptions = {
-  url: string
-  label: string
-}
+export type NavOptions = {
+  url: string;
+  label: string;
+}[];

@@ -1,11 +1,21 @@
-import { navOptions } from "../../types/nav.options";
+import { Link } from "react-router-dom";
+import { NavOptions } from "../../types/nav.options";
+
 type Propstype = {
-  options: navOptions;
+  options: NavOptions;
 };
 export function Nav({ options }: Propstype) {
   return (
     <>
-      <nav></nav>
+      <nav>
+        <ul>
+          {options.map((item) => (
+            <li key={item.label}>
+              <Link to={item.url}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }
