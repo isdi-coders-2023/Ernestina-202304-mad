@@ -30,7 +30,4 @@ describe("Given a Header component", () => {
       expect(elementH2).toBeInTheDocument;
     });
   });
-  // test("Then it should display props values", () => {
-
-  // });
 });

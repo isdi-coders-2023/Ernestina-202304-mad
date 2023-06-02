@@ -4,8 +4,8 @@ export default function Filter() {
   return (
     <div className={style.filter}>
       <img src="../../../public/triangle.png" alt="triangle" />
-      <select name="release-date" id="release-date">
-        <option selected disabled>
+      <select name="release-date" id="release-date" defaultValue={""}>
+        <option value="" disabled>
           RELEASE DATE
         </option>
         <option value="1999">1999</option>
