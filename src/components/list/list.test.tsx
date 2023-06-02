@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { Digimon } from "../../models/digimon";
 import { ContextStructure, AppContext } from "../../context/app.context";
 import { List } from "./list";
+import { MemoryRouter as Router } from "react-router-dom";
 
 describe("Given a List component", () => {
   describe("When it is instantiated", () => {
@@ -18,9 +19,11 @@ describe("Given a List component", () => {
     } as unknown as ContextStructure;
 
     render(
-      <AppContext.Provider value={value}>
-        <List></List>
-      </AppContext.Provider>
+      <Router>
+        <AppContext.Provider value={value}>
+          <List></List>
+        </AppContext.Provider>
+      </Router>
     );
 
     test("Then it should be in the document", () => {

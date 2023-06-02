@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Header } from "./header";
-import { BrowserRouter, Link } from "react-router-dom";
+import { MemoryRouter as Router } from "react-router-dom";
 
 describe("Given a Header component", () => {
   describe("When it is intantiated", () => {
@@ -9,11 +9,9 @@ describe("Given a Header component", () => {
     const subtitle = "TEST SUBTITLE";
     beforeEach(() => {
       render(
-        <BrowserRouter>
-          <Link to="/">
-            <Header title={title} subtitle={subtitle}></Header>
-          </Link>
-        </BrowserRouter>
+        <Router>
+          <Header title={title} subtitle={subtitle}></Header>
+        </Router>
       );
     });
 
