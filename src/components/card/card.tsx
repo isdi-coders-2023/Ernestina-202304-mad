@@ -7,15 +7,14 @@ type PropsType = {
 
 export function Card({ item }: PropsType) {
   return (
-    <Link to="details">
+    <Link to={`details/${item.id}`}>
       <li className="card">
         <div className="card-image">
-          <img src={item.image} alt={`Representación de ${item.name}`} />
+          <img src={item.images[0].href} alt={`${item.name} representation`} />
         </div>
         <div className="card-data">
           <span>{item.name}</span>
           <span className="card-id">#{item.id}</span>
-          <span>{item.url}</span>
         </div>
       </li>
     </Link>

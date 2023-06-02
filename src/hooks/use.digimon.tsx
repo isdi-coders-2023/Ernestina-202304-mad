@@ -11,11 +11,14 @@ export function useDigimon() {
   const repo: ApiRepository = useMemo(() => new ApiRepository(), []);
 
   const handleLoad = useCallback(async () => {
-    const loadedDigimon = await repo.getAll(query, currentPage);
-    const content = loadedDigimon.content;
+    const loadedDigimon = await repo.getDetails(query, currentPage);
+    const content = loadedDigimon;
+
     setDigimon(content);
     setCurrentPage;
   }, [currentPage, repo]);
+
+  repo.getDetails(query, currentPage);
 
   useEffect(() => {
     handleLoad();

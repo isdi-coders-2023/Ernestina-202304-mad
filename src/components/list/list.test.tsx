@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Digimon } from "../../models/digimon";
+import { DigimonLink } from "../../models/digimon";
 import { ContextStructure, AppContext } from "../../context/app.context";
 import { List } from "./list";
 import { MemoryRouter as Router } from "react-router-dom";
@@ -10,7 +10,7 @@ describe("Given a List component", () => {
     const digimon = [
       { id: 69, name: "Venecomon" },
       { id: 420, name: "Sifrinomon" },
-    ] as Digimon[];
+    ] as DigimonLink[];
 
     const value: ContextStructure = {
       digimonContext: {
