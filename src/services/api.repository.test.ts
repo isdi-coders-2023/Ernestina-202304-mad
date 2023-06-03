@@ -47,7 +47,7 @@ describe("Given the class ApiRepository", () => {
     expect(response).toEqual(mockDigimonLink);
   });
 
-  test("Then it should returns make the correct API call and return expected response for getDetails", async () => {
+  test("Then it should return make the correct API call and return expected response for getDetails", async () => {
     expect(global.fetch).toHaveBeenCalledWith(expectedUrl);
     expect(response2).toEqual(mockDigimons);
   });
