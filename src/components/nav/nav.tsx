@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { NavOptions } from "../../types/nav.options";
+import style from "./nav.module.scss";
 
 type Propstype = {
   options: NavOptions;
@@ -7,7 +8,7 @@ type Propstype = {
 export function Nav({ options }: Propstype) {
   return (
     <>
-      <nav>
+      <nav className={style.navbar}>
         <ul>
           {options.map((item) => (
             <li key={item.label}>

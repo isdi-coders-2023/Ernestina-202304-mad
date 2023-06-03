@@ -2,7 +2,7 @@ import { Digimon } from "../models/digimon";
 import { actionTypes } from "./actions.types";
 
 export type DigimonAction = {
-  type: string,
+  type: string;
   payload: Digimon[];
 };
 

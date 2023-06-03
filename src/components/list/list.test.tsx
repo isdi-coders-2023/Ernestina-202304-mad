@@ -8,8 +8,8 @@ import { MemoryRouter as Router } from "react-router-dom";
 describe("Given a List component", () => {
   describe("When it is instantiated", () => {
     const digimon = [
-      { id: 69, name: "Venecomon" },
-      { id: 420, name: "Sifrinomon" },
+      { images: [{ href: "adsasdasd" }], name: "Venecomon", id: 69 },
+      { images: [{ href: "asdasdasd" }], id: 420, name: "Sifrinomon" },
     ] as Digimon[];
 
     const value: ContextStructure = {

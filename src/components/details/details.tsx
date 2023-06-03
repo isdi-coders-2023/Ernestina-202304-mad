@@ -1,4 +1,5 @@
 import { useDigimon } from "../../hooks/use.digimon";
+import DetailsCard from "../details.card/details.card";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import style from "./details.module.scss";
@@ -18,6 +19,7 @@ export default function Details() {
           src="../../../public/backgrounds/desktop/DETAILS.jpg"
           alt="Details desktop background"
         />
+        <DetailsCard></DetailsCard>
         <Footer></Footer>
       </div>
     </>

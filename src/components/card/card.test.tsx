@@ -9,10 +9,14 @@ describe("Given the component PublicCard", () => {
       <Router>
         <Card
           item={{
-            id: 0,
+            images: [{ href: "" }],
+            id: 1,
             name: "",
-            url: "",
-            image: "",
+            attributes: [{ id: 1, attribute: "" }],
+            description: [{ origin: "", language: "", description: "" }],
+            levels: [{ id: 1, level: "" }],
+            releaseDate: "",
+            types: [{ type: "" }],
           }}
         ></Card>
       </Router>

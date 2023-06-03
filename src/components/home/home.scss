@@ -21,6 +21,7 @@ $home-secondary-color: #eead1b;
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
@@ -114,5 +115,14 @@ li:hover img {
 header {
   @media only screen and (min-width: 376px) {
     opacity: 0;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  nav {
+    display: flex;
+    flex-direction: row;
   }
 }
