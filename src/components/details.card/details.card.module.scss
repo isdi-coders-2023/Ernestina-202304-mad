@@ -1,0 +1,17 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  margin: 5em;
+
+  li {
+    color: #7c5da0;
+    font-weight: bolder;
+    font-size: 110%;
+  }
+  span {
+    font-weight: lighter;
+    color: black;
+    height: 5em;
+    width: 5em;
+  }
+}

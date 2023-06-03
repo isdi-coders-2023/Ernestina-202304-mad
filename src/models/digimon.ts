@@ -11,7 +11,7 @@ type Attributes = {
   attribute: string;
 };
 
-type Description = {
+export type Description = {
   origin: string;
   language: string;
   description: string;
@@ -35,7 +35,7 @@ export type Digimon = {
   id: number;
   name: string;
   attributes: Attributes[];
-  description: Description[];
+  descriptions: Description[];
   levels: Level[];
   releaseDate: string;
   types: Type[];
