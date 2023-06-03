@@ -33,12 +33,13 @@ export default function Home() {
         src="/backgrounds/mobile/MOBILE.png"
         alt="Digimon mobile background"
       />
-      <Filter></Filter>
-      <Nav options={options}></Nav>
+      <div className="menu-container">
+        <Filter></Filter>
+        <Nav options={options}></Nav>
+      </div>
       <List></List>
       <Controls></Controls>
       <Footer></Footer>
     </>
   );
 }
-///////

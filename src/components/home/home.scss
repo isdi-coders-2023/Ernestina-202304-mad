@@ -116,3 +116,12 @@ header {
     opacity: 0;
   }
 }
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+}
