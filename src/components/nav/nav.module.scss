@@ -11,10 +11,15 @@
     align-items: center;
     justify-content: center;
     margin: 0;
+    grid-gap: 0;
   }
+
   li {
     min-height: 3em;
-    color: #eead1b;
+  }
+
+  li:first-child {
+    border-right: 4px solid #eead1b;
   }
 
   li:hover {

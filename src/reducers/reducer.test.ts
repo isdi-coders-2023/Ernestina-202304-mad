@@ -22,7 +22,7 @@ describe("Given the digimonReducer", () => {
           id: 1,
           name: "",
           attributes: [{ id: 1, attribute: "" }],
-          description: [{ origin: "", language: "", description: "" }],
+          descriptions: [{ origin: "", language: "", description: "" }],
           levels: [{ id: 1, level: "" }],
           releaseDate: "",
           types: [{ type: "" }],

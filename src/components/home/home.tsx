@@ -10,7 +10,6 @@ import "./home.scss";
 
 export default function Home() {
   const options: NavOptions = [
-    { url: "", label: "Home" },
     { url: "create", label: "Create" },
     { url: "library", label: "Library" },
   ];
