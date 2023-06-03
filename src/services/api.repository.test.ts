@@ -40,10 +40,10 @@ describe("Given the class ApiRepository", () => {
       const get = (await repo.getAll(
         query,
         currentPage
-      )) as unknown as Digimon[];
+      )) as unknown as ApiRepository;
 
       expect(get).toEqual(mockDigimons);
-      expect(global.fetch).toHaveBeenCalled();
+      expect(global.fetch).toHaveBeenCalledWith();
     });
   });
 
