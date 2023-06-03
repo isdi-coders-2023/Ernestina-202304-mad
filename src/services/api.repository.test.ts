@@ -35,14 +35,15 @@ describe("Given the class ApiRepository", () => {
 
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue(mockDigimons),
+        ok: true,
       });
       const get = (await repo.getAll(
         query,
         currentPage
-      )) as unknown as ApiRepository;
+      )) as unknown as Digimon[];
 
-      expect(get).toEqual(Object(get));
-      expect(global.fetch).toHaveBeenCalledWith();
+      expect(get).toEqual(mockDigimons);
+      expect(global.fetch).toHaveBeenCalled();
     });
   });
 
@@ -50,12 +51,23 @@ describe("Given the class ApiRepository", () => {
     test("Then it should returns...", async () => {
       const query = "something";
       const currentPage = 2;
+      const mockError = "Error";
+
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: false,
+        status: 400,
+        statusText: "Error",
+      });
+
+      const apiRepository = new ApiRepository();
 
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue(mockDigimonLink),
       });
       const link = await repo.getDetails(query, currentPage);
-
+      expect(apiRepository.getDetails(query, currentPage)).rejects.toThrow(
+        mockError
+      );
       expect(link).toEqual(["botamon.png"]);
     });
   });
