@@ -1,4 +1,4 @@
-import { DigimonLink } from "../models/digimon";
+import { Digimon } from "../models/digimon";
 import { DigimonAction } from "./actions.creator";
 import { actionTypes } from "./actions.types";
 import { DigimonState, digimonReducer } from "./reducer";
@@ -16,12 +16,16 @@ describe("Given the digimonReducer", () => {
 
     test('Then it should execute "load" action type', () => {
       const initialState: DigimonState = { digimons: [] };
-      const mockDigimons: DigimonLink[] = [
+      const mockDigimons: Digimon[] = [
         {
-          id: 3,
-          name: "agumon",
-          url: "awda",
-          image: "dawda",
+          images: [{ href: "" }],
+          id: 1,
+          name: "",
+          attributes: [{ id: 1, attribute: "" }],
+          description: [{ origin: "", language: "", description: "" }],
+          levels: [{ id: 1, level: "" }],
+          releaseDate: "",
+          types: [{ type: "" }],
         },
       ];
 

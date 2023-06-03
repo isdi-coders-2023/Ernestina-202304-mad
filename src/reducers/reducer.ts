@@ -1,16 +1,16 @@
-import { DigimonLink } from "../models/digimon";
+import { Digimon } from "../models/digimon";
 import { DigimonAction } from "./actions.creator";
 import { actionTypes } from "./actions.types";
 
 export type DigimonState = {
-  digimons: DigimonLink[];
+  digimons: Digimon[];
 };
 
 export const digimonReducer = (state: DigimonState, action: DigimonAction) => {
-  let payload: DigimonLink[] | DigimonLink | number;
+  let payload: Digimon[] | Digimon | number;
   switch (action.type) {
     case actionTypes.load:
-      payload = action.payload as DigimonLink[];
+      payload = action.payload as Digimon[];
       return { ...state, digimons: payload };
 
     default:
