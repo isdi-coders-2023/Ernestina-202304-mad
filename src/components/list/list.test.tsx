@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { DigimonLink } from "../../models/digimon";
+import { Digimon } from "../../models/digimon";
 import { ContextStructure, AppContext } from "../../context/app.context";
 import { List } from "./list";
 import { MemoryRouter as Router } from "react-router-dom";
@@ -8,9 +8,9 @@ import { MemoryRouter as Router } from "react-router-dom";
 describe("Given a List component", () => {
   describe("When it is instantiated", () => {
     const digimon = [
-      { id: 69, name: "Venecomon" },
-      { id: 420, name: "Sifrinomon" },
-    ] as DigimonLink[];
+      { images: [{ href: "adsasdasd" }], name: "Venecomon", id: 69 },
+      { images: [{ href: "asdasdasd" }], id: 420, name: "Sifrinomon" },
+    ] as Digimon[];
 
     const value: ContextStructure = {
       digimonContext: {
