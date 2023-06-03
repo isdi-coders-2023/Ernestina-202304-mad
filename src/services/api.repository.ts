@@ -17,12 +17,10 @@ export class ApiRepository implements DigimonRepo {
   async getDetails(query: string, currentPage: number) {
     const detailsResponse = await this.getAll(query, currentPage);
 
-    const details = await Promise.all(
-      detailsResponse.content.map(async (item) => {
-        const digimonDetail = fetch(item.href);
-        return (await digimonDetail).json();
-      })
-    );
+    const details = detailsResponse.content.map(async (item) => {
+      const digimonDetail = fetch(item.href);
+      return (await digimonDetail).json();
+    });
 
     return Promise.all(details) as Promise<Digimon[]>;
   }
