@@ -32,6 +32,7 @@ describe("Given the class ApiRepository", () => {
   //   ok: true,
   //   json: jest.fn().mockResolvedValue(mockResponseLink),
   // });
+
   beforeEach(() => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
