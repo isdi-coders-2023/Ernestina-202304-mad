@@ -2,7 +2,7 @@ import { ApiResponse } from "../models/digimon";
 import { Digimon, DigimonLink } from "../models/digimon";
 import { ApiRepository } from "./api.repository";
 
-describe("Given the class ApiRepository", async () => {
+describe("Given the class ApiRepository", () => {
   const query = "";
   const currentPage = 3;
   const expectedUrl = `https://digimon-api.com/api/v1/digimon/${query}${currentPage}`;
@@ -33,13 +33,24 @@ describe("Given the class ApiRepository", async () => {
     json: jest.fn().mockResolvedValue(mockResponseLink),
   });
 
-  const apiRepository = new ApiRepository();
-  const response = await apiRepository.getAll(query, currentPage);
-  const response2 = await apiRepository.getDetails(query, currentPage);
+  global.fetch = jest.fn().mockResolvedValue({
+    ok: true,
+    json: jest.fn().mockResolvedValue(mockResponseLink),
+  });
 
-  expect(global.fetch).toHaveBeenCalled();
-  expect(response).toEqual(mockDigimons);
-  expect(response2).toEqual(mockResponseLink);
+  const apiRepository = new ApiRepository();
+  const response = apiRepository.getAll(query, currentPage);
+  const response2 = apiRepository.getDetails(query, currentPage);
+
+  test("Then it should returns make the correct API call and return expected response for getAll", async () => {
+    expect(global.fetch).toHaveBeenCalledWith(expectedUrl);
+    expect(response).toEqual(mockDigimonLink);
+  });
+
+  test("Then it should returns make the correct API call and return expected response for getDetails", async () => {
+    expect(global.fetch).toHaveBeenCalledWith(expectedUrl);
+    expect(response2).toEqual(mockDigimons);
+  });
 
   describe("When it is instantiated implements DigimonRepo", () => {
     test("Then it should returns...", async () => {
@@ -54,7 +65,12 @@ describe("Given the class ApiRepository", async () => {
         statusText: "Error",
       });
 
-      const apiRepository;
+      const apiRepository = new ApiRepository();
+      expect(apiRepository.getAll(query, currentPage)).rejects.toThrow(
+        mockThrowError
+      );
+
+      expect(global.fetch).toHaveBeenCalledWith(expectedUrl);
     });
   });
 });
