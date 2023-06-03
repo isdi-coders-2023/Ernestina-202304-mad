@@ -40,19 +40,22 @@ describe("Given the class ApiRepository", () => {
         query,
         currentPage
       )) as unknown as ApiRepository;
-      expect(get).toEqual(Object(get));
 
+      expect(get).toEqual(Object(get));
       expect(global.fetch).toHaveBeenCalledWith();
     });
   });
+
   describe("When it is instantiated implements DigimonRepo", () => {
     test("Then it should returns...", async () => {
       const query = "something";
       const currentPage = 2;
+
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue(mockDigimonLink),
       });
       const link = await repo.getDetails(query, currentPage);
+
       expect(link).toEqual(["botamon.png"]);
     });
   });
