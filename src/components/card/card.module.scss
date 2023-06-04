@@ -44,6 +44,11 @@ $home-secondary-color: #eead1b;
   }
 }
 
+.card:hover {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 20px #8b9aef35;
+}
+
 .cardImage {
   display: flex;
   align-items: center;
@@ -59,18 +64,13 @@ $home-secondary-color: #eead1b;
   text-decoration: none;
 }
 
-li:hover {
-  transition: 0.5s ease-in-out;
-  box-shadow: 0 0 20px #8b9aef35;
-}
-
-li img {
+.card img {
   transform: scale(0.7);
   height: 80%;
   margin: 1em;
 }
 
-li:hover img {
+.card:hover img {
   transform: scale(0.8) rotate(2deg);
   transition: 0.5s ease-in-out;
 }

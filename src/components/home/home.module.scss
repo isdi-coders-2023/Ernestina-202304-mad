@@ -1,7 +1,7 @@
 $home-primary-color: #8b9aef;
 $home-secondary-color: #eead1b;
 
-.home--desktop-bg {
+.homeDesktopBg {
   width: 100vw;
   display: none;
   position: relative;
@@ -10,18 +10,12 @@ $home-secondary-color: #eead1b;
   }
 }
 
-.home--mobile-bg {
+.homeMobileBg {
   height: 100vh;
   width: auto;
   position: relative;
   @media only screen and (min-width: 376px) {
     display: none;
-  }
-}
-
-header {
-  @media only screen and (min-width: 376px) {
-    opacity: 0;
   }
 }
 
@@ -34,7 +28,15 @@ a:visited {
   color: inherit;
 }
 
-.menu-container {
+.headerContainer {
+  header {
+    @media only screen and (min-width: 376px) {
+      opacity: 0;
+    }
+  }
+}
+
+.menuContainer {
   display: flex;
   flex-direction: row;
   width: 100%;

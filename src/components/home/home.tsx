@@ -6,7 +6,7 @@ import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { List } from "../list/list";
 import { Nav } from "../nav/nav";
-import "./home.scss";
+import style from "./home.module.scss";
 
 export default function Home() {
   const options: NavOptions = [
@@ -18,21 +18,23 @@ export default function Home() {
   const subtitle = `♥ Caringly crafted API`;
   return (
     <>
-      <Header
-        title={title.toUpperCase()}
-        subtitle={subtitle.toUpperCase()}
-      ></Header>
+      <div className={style.headerContainer}>
+        <Header
+          title={title.toUpperCase()}
+          subtitle={subtitle.toUpperCase()}
+        ></Header>
+      </div>
       <img
-        className="home--desktop-bg"
+        className={style.homeDesktopBg}
         src="/backgrounds/desktop/HOME.png"
         alt="Digimon desktop background"
       />
       <img
-        className="home--mobile-bg"
+        className={style.homeMobileBg}
         src="/backgrounds/mobile/MOBILE.png"
         alt="Digimon mobile background"
       />
-      <div className="menu-container">
+      <div className={style.menuContainer}>
         <Filter></Filter>
         <Nav options={options}></Nav>
       </div>
