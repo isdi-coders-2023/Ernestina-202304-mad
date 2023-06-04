@@ -1,0 +1,51 @@
+$home-primary-color: #8b9aef;
+$home-secondary-color: #eead1b;
+
+.homeDesktopBg {
+  width: 100vw;
+  display: none;
+  position: relative;
+  @media only screen and (min-width: 376px) {
+    display: initial;
+  }
+}
+
+.homeMobileBg {
+  height: 100vh;
+  width: auto;
+  position: relative;
+  @media only screen and (min-width: 376px) {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.headerContainer {
+  header {
+    @media only screen and (min-width: 376px) {
+      opacity: 0;
+    }
+  }
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 376px) {
+    flex-direction: column;
+  }
+}

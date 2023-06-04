@@ -1,18 +1,23 @@
 .filter {
   display: flex;
-  width: 50vw;
+  width: 100vw;
   height: 5em;
   justify-content: center;
   align-items: center;
   margin: 4em 0;
+  overflow: hidden;
 
   select {
+    text-indent: 1px;
+    text-overflow: "";
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: #8b9aef;
     color: white;
     text-align: center;
     margin: 2em;
-    width: 30em;
+    width: 15em;
     height: 3em;
     font-size: 1.5em;
     border-radius: 20px;
@@ -20,6 +25,10 @@
     padding: 0.5rem;
     font-family: "Digimon", serif;
     cursor: pointer;
+    @media only screen and (max-width: 376px) {
+      width: 12em;
+      margin: 2em 0;
+    }
   }
 
   img {

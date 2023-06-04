@@ -10,6 +10,8 @@
 
   li {
     margin: 1em 0;
+    height: auto;
+    box-shadow: none;
   }
 
   header {
@@ -26,5 +28,11 @@
   }
   h2 {
     color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+header {
+  @media only screen and (min-width: 376px) {
+    opacity: 1;
   }
 }

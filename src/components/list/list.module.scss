@@ -1,0 +1,6 @@
+.digimons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem 2rem 6rem 2rem;
+}
