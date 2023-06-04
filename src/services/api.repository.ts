@@ -25,4 +25,3 @@ export class ApiRepository implements DigimonRepo {
     return Promise.all(details) as Promise<Digimon[]>;
   }
 }
-///
