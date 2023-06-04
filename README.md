@@ -148,6 +148,6 @@ https://www.notion.so/202304-w5-isdi-coders/API-Digimon-26fc7622ac1c4150aa460b4f
 <br>
 <br>
 
-## Link al deploy de la app:
+## Link al despliegue de la aplicación en Vercel:
 
 https://ernestina-202304-mad.vercel.app/
