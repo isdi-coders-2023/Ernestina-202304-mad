@@ -3,7 +3,6 @@ import { DigimonLink } from "../models/digimon";
 import { ApiRepository } from "./api.repository";
 import "@testing-library/jest-dom";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let repo: ApiRepository;
 describe("Given the class ApiRepository", () => {
   beforeEach(() => {
@@ -38,7 +37,7 @@ describe("Given the class ApiRepository", () => {
   describe("When we use the getDetails method", () => {
     test("Then it should return", async () => {
       const mockInitialFetch = {
-        id: "e",
+        id: "1",
         name: "e",
         href: "www.jeje.je",
       };
@@ -53,7 +52,7 @@ describe("Given the class ApiRepository", () => {
       //   2
       // )) as unknown as DigimonDetails;
 
-      expect(mockInitialFetch.name).toBeInTheDocument;
+      expect(mockInitialFetch.href).toBeInTheDocument;
     });
   });
 });
