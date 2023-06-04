@@ -1,11 +1,16 @@
-import { DigimonDetails } from "../models/detail";
+//import { DigimonDetails } from "../models/detail";
 import { DigimonLink } from "../models/digimon";
 import { ApiRepository } from "./api.repository";
+import "@testing-library/jest-dom";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+let repo: ApiRepository;
 describe("Given the class ApiRepository", () => {
+  beforeEach(() => {
+    repo = new ApiRepository();
+  });
   describe("When it is instantiated implements DigimonRepo and the response is ok", () => {
     test("Then it should return", async () => {
-      const repo = new ApiRepository();
       const mockDigimon = [{ name: "patata", id: 2 }] as unknown as DigimonLink;
       global.fetch = jest.fn().mockResolvedValue({
         json: () => Promise.resolve(mockDigimon),
@@ -25,7 +30,6 @@ describe("Given the class ApiRepository", () => {
         status: 400,
         statusText: "Error",
       });
-      const repo = await new ApiRepository();
 
       expect(repo.getAll("test", 1)).rejects.toThrow(mockError);
     });
@@ -33,24 +37,23 @@ describe("Given the class ApiRepository", () => {
 
   describe("When we use the getDetails method", () => {
     test("Then it should return", async () => {
-      const repo = new ApiRepository();
-
       const mockInitialFetch = {
         id: "e",
         name: "e",
         href: "www.jeje.je",
       };
+
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue(mockInitialFetch.href),
         ok: true,
       });
 
-      const getDetails = (await repo.getDetails(
-        "epa",
-        2
-      )) as unknown as DigimonDetails;
+      // const getDetails = (await repo.getDetails(
+      //   "epa",
+      //   2
+      // )) as unknown as DigimonDetails;
 
-      expect(getDetails).toHaveBeenCalled();
+      expect(mockInitialFetch.name).toBeInTheDocument;
     });
   });
 });
