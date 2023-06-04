@@ -1,20 +1,22 @@
 # Week 5 | Proyecto en equipo
+
 ## Grupo **Ernestina** | Digi-API
 
 <img src="public/Digi-API.jpg" alt="Digi-Api Home image" width="700">
 
 <br>
 
-***Digi-API*** es una APP que recopila un total de 1400 digimons. El usuario podrá visualizar todos los digimons y sus ID, organizados en grupos de 20 y siguiendo una paginación estructurada.
+**_Digi-API_** es una APP que recopila un total de 1400 digimons. El usuario podrá visualizar todos los digimons y sus ID, organizados en grupos de 20 y siguiendo una paginación estructurada.
 
-A su vez, si el usuario realiza un *click* en cualquier digimon, accederá a la página de *Details* donde se le enseñará su nombre (*NAME*), su descripción (*DESCRIPTION*), su fecha de lanzamiento (*RELEASE DATE*), su atributo (*ATTRIBUTE*) y su nivel (*LEVEL*).
+A su vez, si el usuario realiza un _click_ en cualquier digimon, accederá a la página de _Details_ donde se le enseñará su nombre (_NAME_), su descripción (_DESCRIPTION_), su fecha de lanzamiento (_RELEASE DATE_), su atributo (_ATTRIBUTE_) y su nivel (_LEVEL_).
 
-###  **Es un proyecto SPA con varias 'páginas' en *React*, gestionando el estado común con *context* + *reducer* (*useReducer*). Se utiliza *scss*, *css-module* y la app es *responsive* (mobile + desktop) / mobile first.**
+### **Es un proyecto SPA con varias 'páginas' en _React_, gestionando el estado común con _context_ + _reducer_ (_useReducer_). Se utiliza _scss_, _css-module_ y la app es _responsive_ (mobile + desktop) / mobile first.**
 
 <br>
 <br>
 
 # Índice
+
 1. [Título, nombre del grupo y descripción del proyecto](#week-5--proyecto-en-equipo)
 
 2. [Scripts](#scripts)
@@ -48,7 +50,6 @@ A su vez, si el usuario realiza un *click* en cualquier digimon, accederá a la 
 <br>
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-red)
-
 
 <br>
 <br>
@@ -128,15 +129,25 @@ https://www.notion.so/202304-w5-isdi-coders/API-Digimon-26fc7622ac1c4150aa460b4f
 <br>
 
 ## Tecnologías utilizadas
-  - React
-  - TypeScript
-  - JavaScript
-  - Sass
-  - Vite + React
+
+- React
+- TypeScript
+- JavaScript
+- JEST
+- Sass
+- Vite
 
 <br>
 <br>
 
 ## Desarrolladores del proyecto
-| [<img src="https://avatars.githubusercontent.com/u/123998047?v=4" width=115><br><sub>Raquel Adrados</sub>](https://github.com/raqueladrados) |  [<img src="https://avatars.githubusercontent.com/u/104355739?v=4" width=115><br><sub>Sergio Mata</sub>](https://github.com/inviolableviolets) |  [<img src="https://avatars.githubusercontent.com/u/122877560?v=4" width=115><br><sub>Kevin Schans</sub>](https://github.com/KevinVanDerSchans) |
-| :---: | :---: | :---: |
+
+| [<img src="https://avatars.githubusercontent.com/u/123998047?v=4" width=115><br><sub>Raquel Adrados</sub>](https://github.com/raqueladrados) | [<img src="https://avatars.githubusercontent.com/u/104355739?v=4" width=115><br><sub>Sergio Mata</sub>](https://github.com/inviolableviolets) | [<img src="https://avatars.githubusercontent.com/u/122877560?v=4" width=115><br><sub>Kevin Schans</sub>](https://github.com/KevinVanDerSchans) |
+| :------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
+
+<br>
+<br>
+
+## Link al despliegue de la aplicación en Vercel:
+
+https://ernestina-202304-mad.vercel.app/
