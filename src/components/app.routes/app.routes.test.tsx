@@ -23,7 +23,7 @@ describe("Given the AppRoutes component", () => {
       element = screen.getByText("Routes");
     });
 
-    test("Then it should returns...", () => {
+    test("Then it should be in the document", () => {
       expect(MockComponent).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });
@@ -43,7 +43,26 @@ describe("Given the AppRoutes component", () => {
       element = screen.getByText("Routes");
     });
 
-    test("Then it should returns...", () => {
+    test("Then it should be in the document", () => {
+      expect(MockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When it is instantiated with the Error route", () => {
+    let element: HTMLElement;
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/*"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("DIGIMON");
+    });
+
+    test("Then it should be in the document", () => {
       expect(MockComponent).toHaveBeenCalled();
       expect(element).toBeInTheDocument();
     });

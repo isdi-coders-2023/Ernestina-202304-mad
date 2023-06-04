@@ -2,8 +2,8 @@ import { Header } from "../header/header";
 import style from "./error.module.scss";
 
 export default function Error() {
-  const title = "Digimon";
-  const subtitle = `GO BACK HOME REFUGEES NOT WELCOME`;
+  const title = "ERROR 404";
+  const subtitle = `GO BACK HOME`;
   return (
     <>
       <div className={style.container}>
