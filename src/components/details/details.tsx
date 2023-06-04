@@ -1,6 +1,5 @@
 import { useDigimon } from "../../hooks/use.digimon";
 import DetailsCard from "../details.card/details.card";
-import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import style from "./details.module.scss";
 
@@ -16,7 +15,6 @@ export default function Details() {
           subtitle={subtitle.toUpperCase()}
         ></Header>
         <DetailsCard></DetailsCard>
-        <Footer></Footer>
       </div>
     </>
   );

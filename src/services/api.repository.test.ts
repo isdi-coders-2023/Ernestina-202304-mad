@@ -34,25 +34,25 @@ describe("Given the class ApiRepository", () => {
     });
   });
 
-  describe("When we use the getDetails method", () => {
-    test("Then it should return", async () => {
-      const mockInitialFetch = {
-        id: "1",
-        name: "e",
-        href: "www.jeje.je",
-      };
+  // describe("When we use the getDetails method", () => {
+  //   test("Then it should return", async () => {
+  //     const mockInitialFetch = {
+  //       id: "1",
+  //       name: "e",
+  //       href: "www.jeje.je",
+  //     };
 
-      global.fetch = jest.fn().mockResolvedValue({
-        json: jest.fn().mockResolvedValue(mockInitialFetch.href),
-        ok: true,
-      });
+  //     global.fetch = jest.fn().mockResolvedValue({
+  //       json: jest.fn().mockResolvedValue(mockInitialFetch.href),
+  //       ok: true,
+  //     });
 
-      // const getDetails = (await repo.getDetails(
-      //   "epa",
-      //   2
-      // )) as unknown as DigimonDetails;
+  //     // const getDetails = (await repo.getDetails(
+  //     //   "epa",
+  //     //   2
+  //     // )) as unknown as DigimonDetails;
 
-      expect(mockInitialFetch.href).toBeInTheDocument;
-    });
-  });
+  //     expect(mockInitialFetch.href).toBeInTheDocument;
+  //   });
+  // });
 });

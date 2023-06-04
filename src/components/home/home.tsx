@@ -2,7 +2,6 @@ import { useDigimon } from "../../hooks/use.digimon";
 import { NavOptions } from "../../types/nav.options";
 import { Controls } from "../controls/controls";
 import Filter from "../filter/filter";
-import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { List } from "../list/list";
 import { Nav } from "../nav/nav";
@@ -40,7 +39,6 @@ export default function Home() {
       </div>
       <List></List>
       <Controls></Controls>
-      <Footer></Footer>
     </>
   );
 }
