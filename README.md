@@ -49,8 +49,6 @@ A su vez, si el usuario realiza un *click* en cualquier digimon, accederá a la 
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-red)
 
-![Badge en Desarollo](https://img.shields.io/badge/STATUS%20coverage-100%-green)
-
 
 <br>
 <br>
