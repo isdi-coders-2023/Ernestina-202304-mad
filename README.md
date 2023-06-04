@@ -15,21 +15,30 @@ A su vez, si el usuario realiza un _click_ en cualquier digimon, accederá a la 
 <br>
 <br>
 
+## Link al despliegue de la aplicación en Vercel:
+
+https://ernestina-202304-mad.vercel.app/
+
+<br>
+<br>
+
 # Índice
 
 1. [Título, nombre del grupo y descripción del proyecto](#week-5--proyecto-en-equipo)
 
-2. [Scripts](#scripts)
+2. [Link al despliegue de la aplicación en *Vercel*](#link-al-despliegue-de-la-aplicación-en-vercel)
 
-3. [Estado del proyecto](#estado-del-proyecto)
+3. [Scripts](#scripts)
 
-4. [Instrucciones del proyecto en grupos](#instrucciones-del-proyecto-en-grupos)
+4. [Estado del proyecto](#estado-del-proyecto)
 
-5. [Listado de componentes](#listado-de-componentes)
+5. [Instrucciones del proyecto en grupos](#instrucciones-del-proyecto-en-grupos)
 
-6. [Tecnologías utilizadas](#tecnologías-utilizadas)
+6. [Listado de componentes](#listado-de-componentes)
 
-7. [Desarrolladores del proyecto](#desarrolladores-del-proyecto)
+7. [Tecnologías utilizadas](#tecnologías-utilizadas)
+
+8. [Desarrolladores del proyecto](#desarrolladores-del-proyecto)
 
 <br>
 <br>
@@ -49,7 +58,7 @@ A su vez, si el usuario realiza un _click_ en cualquier digimon, accederá a la 
 
 <br>
 
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-red)
+![Badge en Desarrollo](https://img.shields.io/badge/STATUS-EN%20DESARROLLO-red)
 
 <br>
 <br>
@@ -146,8 +155,6 @@ https://www.notion.so/202304-w5-isdi-coders/API-Digimon-26fc7622ac1c4150aa460b4f
 | :------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
 
 <br>
-<br>
 
-## Link al despliegue de la aplicación en Vercel:
 
-https://ernestina-202304-mad.vercel.app/
+[def]: https://img.shields.io/badge/coverage-100%-green
