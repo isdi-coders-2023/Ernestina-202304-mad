@@ -4,11 +4,12 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 
-const MockComponent = jest.fn().mockReturnValue(<h1>Home</h1>);
+const MockComponent = jest.fn().mockReturnValue(<h1>Routes</h1>);
 jest.mock("../home/home", () => MockComponent);
+jest.mock("../details/details", () => MockComponent);
 
 describe("Given the AppRoutes component", () => {
-  describe("When it is instantiated with a route", () => {
+  describe("When it is instantiated with the Home route", () => {
     let element: HTMLElement;
     beforeEach(async () => {
       await act(async () => {
@@ -19,7 +20,27 @@ describe("Given the AppRoutes component", () => {
         );
       });
 
-      element = screen.getByText("Home");
+      element = screen.getByText("Routes");
+    });
+
+    test("Then it should returns...", () => {
+      expect(MockComponent).toHaveBeenCalled();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is instantiated with the Details route", () => {
+    let element: HTMLElement;
+    beforeEach(async () => {
+      await act(async () => {
+        render(
+          <Router initialEntries={["/details/:id"]} initialIndex={0}>
+            <AppRoutes></AppRoutes>
+          </Router>
+        );
+      });
+
+      element = screen.getByText("Routes");
     });
 
     test("Then it should returns...", () => {
