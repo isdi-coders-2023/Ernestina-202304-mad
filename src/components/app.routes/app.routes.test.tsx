@@ -59,7 +59,7 @@ describe("Given the AppRoutes component", () => {
         );
       });
 
-      element = screen.getByText("DIGIMON");
+      element = screen.getByText("ERROR 404");
     });
 
     test("Then it should be in the document", () => {
