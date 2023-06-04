@@ -15,7 +15,12 @@
   }
 
   li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 3em;
+    padding: 0 2em;
+    font-size: 150%;
   }
 
   li:first-child {
